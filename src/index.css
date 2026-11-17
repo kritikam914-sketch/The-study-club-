@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root,
+[data-theme="tangerine"] {
+  --canvas: #FFF9F5;
+  --surface: #FFFFFF;
+  --surface-subtle: #FFF0E8;
+  --ink: #1E1B2E;
+  --ink-muted: #554D66;
+  --ink-faint: #776E87;
+  --border: #F2DFD3;
+  --border-strong: #E4C5B3;
+  --accent: #FF5E7E;
+  --accent-hover: #E84366;
+  --accent-soft: #FFEBF0;
+  --accent-ink: #A61C3C;
+  --secondary: #3B82F6;
+  --secondary-soft: #EFF6FF;
+  --success: #10B981;
+  --success-soft: #ECFDF5;
+  --warning: #F59E0B;
+  --warning-soft: #FFFBEB;
+  --danger: #E11D48;
+  --danger-soft: #FFF1F2;
+}
+
+[data-theme="lavender"] {
+  --canvas: #FAF7FF;
+  --surface: #FFFFFF;
+  --surface-subtle: #F2ECFF;
+  --ink: #1E1633;
+  --ink-muted: #53466E;
+  --ink-faint: #756791;
+  --border: #E5DBFA;
+  --border-strong: #CFC0F2;
+  --accent: #8B5CF6;
+  --accent-hover: #7C3AED;
+  --accent-soft: #F3EEFF;
+  --accent-ink: #5B21B6;
+  --secondary: #EC4899;
+  --secondary-soft: #FDF2F8;
+  --success: #10B981;
+  --success-soft: #ECFDF5;
+  --warning: #F59E0B;
+  --warning-soft: #FFFBEB;
+  --danger: #E11D48;
+  --danger-soft: #FFF1F2;
+}
+
+[data-theme="matcha"] {
+  --canvas: #F4FBF6;
+  --surface: #FFFFFF;
+  --surface-subtle: #E6F5EA;
+  --ink: #0F261A;
+  --ink-muted: #3A5948;
+  --ink-faint: #5D7B6A;
+  --border: #D1EAD8;
+  --border-strong: #B0D8BC;
+  --accent: #10B981;
+  --accent-hover: #059669;
+  --accent-soft: #E6FAF2;
+  --accent-ink: #065F46;
+  --secondary: #F59E0B;
+  --secondary-soft: #FFFBEB;
+  --success: #16A34A;
+  --success-soft: #F0FDF4;
+  --warning: #D97706;
+  --warning-soft: #FFFBEB;
+  --danger: #DC2626;
+  --danger-soft: #FEF2F2;
+}
+
+[data-theme="cobalt"] {
+  --canvas: #F3F8FF;
+  --surface: #FFFFFF;
+  --surface-subtle: #E6F0FF;
+  --ink: #0B1830;
+  --ink-muted: #3F5273;
+  --ink-faint: #617496;
+  --border: #D6E4FA;
+  --border-strong: #B5CEF5;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #EAF2FF;
+  --accent-ink: #1E40AF;
+  --secondary: #FF6B8B;
+  --secondary-soft: #FFF0F3;
+  --success: #059669;
+  --success-soft: #ECFDF5;
+  --warning: #D97706;
+  --warning-soft: #FFFBEB;
+  --danger: #DC2626;
+  --danger-soft: #FEF2F2;
+}
+
+[data-theme="sunset"] {
+  --canvas: #FFF8F2;
+  --surface: #FFFFFF;
+  --surface-subtle: #FFECDC;
+  --ink: #24140D;
+  --ink-muted: #614335;
+  --ink-faint: #826253;
+  --border: #F5D9C4;
+  --border-strong: #E8BC9C;
+  --accent: #FF6B35;
+  --accent-hover: #E5531F;
+  --accent-soft: #FFF0E8;
+  --accent-ink: #9A2E08;
+  --secondary: #F59E0B;
+  --secondary-soft: #FFFBEB;
+  --success: #059669;
+  --success-soft: #ECFDF5;
+  --warning: #D97706;
+  --warning-soft: #FFFBEB;
+  --danger: #DC2626;
+  --danger-soft: #FEF2F2;
+}
+
+[data-theme="berry"] {
+  --canvas: #FFF6FA;
+  --surface: #FFFFFF;
+  --surface-subtle: #FFE8F2;
+  --ink: #26121E;
+  --ink-muted: #664257;
+  --ink-faint: #876378;
+  --border: #F6D5E5;
+  --border-strong: #EBB5CF;
+  --accent: #EC4899;
+  --accent-hover: #DB2777;
+  --accent-soft: #FDF2F8;
+  --accent-ink: #9D174D;
+  --secondary: #14B8A6;
+  --secondary-soft: #F0FDFA;
+  --success: #10B981;
+  --success-soft: #ECFDF5;
+  --warning: #F59E0B;
+  --warning-soft: #FFFBEB;
+  --danger: #E11D48;
+  --danger-soft: #FFF1F2;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--canvas);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "StudyClub",
+  "description": "Vibrant weekly study planner, hourly focus timer with +5 point rewards, and live 5-person multiplayer study rooms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
